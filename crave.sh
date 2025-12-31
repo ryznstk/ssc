@@ -46,14 +46,14 @@ crave run --no-patch -- "
   # ================================
   # Initialize Evox repo
   # ================================
-  echo '>>> Initializing Lunaris-AOSP repo'
+  echo '>>> Initializing Evolution-X repo'
   $BUILD_DIFFERENT_ROM
 
   # ================================
   # Clone local manifests
   # ================================
   echo '>>> Cloning local manifests'
-  git clone https://github.com/droidcore/manifest_peridot.git -b lineage-23.0 .repo/local_manifests/
+  git clone https://github.com/ryznstk/manifest_peridot.git -b lineage-23.0 .repo/local_manifests/
 
   # ================================
   # Sync sources
