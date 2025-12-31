@@ -43,32 +43,17 @@ crave run --no-patch -- "
   rm -rf device/xiaomi/peridot
   rm -rf out/target/product/peridot
   
-  # ================================
-  # Initialize Evox repo
-  # ================================
   echo '>>> Initializing Evolution-X repo'
   $BUILD_DIFFERENT_ROM
 
-  # ================================
-  # Clone local manifests
-  # ================================
   echo '>>> Cloning local manifests'
   git clone https://github.com/ryznstk/manifest_peridot.git -b lineage-23.0 .repo/local_manifests/
 
-  # ================================
-  # Sync sources
-  # ================================
   echo '>>> Syncing sources'
   /opt/crave/resync.sh
 
-  # ================================
-  # Setup build environment
-  # ================================
   . build/envsetup.sh
 
-  # ================================
-  # Build
-  # ================================
   echo '>>> Starting build'
   lunch lineage_peridot-bp3a-user
   make installclean
