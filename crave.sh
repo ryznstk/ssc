@@ -7,7 +7,7 @@ set -e
 export PROJECTFOLDER="aosp"
 export PROJECTID="35"
 export REPO_INIT="repo init -u https://android.googlesource.com/platform/manifest"
-export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Evolution-X/manifest -b bq1 --git-lfs" # Change this if you'd like to build something else
+export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Evolution-X/manifest -b bq2 --git-lfs" # Change this if you'd like to build something else
 
 # ================================
 # Destroy Old Clones
@@ -55,7 +55,7 @@ crave run --no-patch -- "
   . build/envsetup.sh
 
   echo '>>> Starting build'
-  lunch lineage_peridot-bp3a-user
+  lunch lineage_peridot-bp4a-user
   make installclean
   m evolution 
 "
