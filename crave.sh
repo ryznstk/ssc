@@ -7,7 +7,7 @@ set -e
 export PROJECTFOLDER="aosp"
 export PROJECTID="35"
 export REPO_INIT="repo init -u https://android.googlesource.com/platform/manifest"
-export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Evolution-X/manifest -b bq2 --git-lfs"
+export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Project-Mist-OS/manifest.git -b 16.2 --git-lfs"
 # ================================
 # Destroy Old Clones
 # ================================
@@ -54,7 +54,7 @@ crave run --no-patch -- "
   . build/envsetup.sh
 
   echo '>>> Starting build'
-  lunch lineage_peridot-bp4a-user
+  mistify peridot user
   make installclean
-  m evolution
+  mist b
 "
