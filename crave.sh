@@ -51,6 +51,8 @@ crave run --no-patch -- "
   echo '>>> Syncing sources'
   /opt/crave/resync.sh
 
+  export RELAX_USES_LIBRARY_CHECK=true
+
   . build/envsetup.sh
 
   echo '>>> Starting build'
