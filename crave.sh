@@ -7,7 +7,7 @@ set -e
 export PROJECTFOLDER="aosp"
 export PROJECTID="35"
 export REPO_INIT="repo init -u https://android.googlesource.com/platform/manifest"
-export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Project-Mist-OS/manifest.git -b 16.2 --git-lfs"
+export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Evolution-X/manifest -b bq2 --git-lfs"
 # ================================
 # Destroy Old Clones
 # ================================
@@ -46,17 +46,15 @@ crave run --no-patch -- "
   $BUILD_DIFFERENT_ROM
 
   echo '>>> Cloning local manifests'
-  git clone https://github.com/ryznstk/manifest_peridot.git -b lineage-23.0 .repo/local_manifests/
+  git clone https://github.com/ryznstk/manifest.git -b main .repo/local_manifests/
 
   echo '>>> Syncing sources'
   /opt/crave/resync.sh
 
-  export RELAX_USES_LIBRARY_CHECK=true
-
   . build/envsetup.sh
 
   echo '>>> Starting build'
-  mistify peridot user
+  lunch lineage_peridot-bp4a-user
   make installclean
-  mist b
+  m evolution
 "
