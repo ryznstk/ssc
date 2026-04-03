@@ -4,10 +4,10 @@ set -e
 # ================================
 # Project Configuration
 # ================================
-export PROJECTFOLDER="LOS"
-export PROJECTID="93"
-export REPO_INIT="https://github.com/accupara/los22.git -b lineage-22.1 --git-lfs --depth=1"
-export BUILD_DIFFERENT_ROM="repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.2 --git-lfs"
+export PROJECTFOLDER="aosp"
+export PROJECTID="35"
+export REPO_INIT="repo init -u https://android.googlesource.com/platform/manifest"
+export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Evolution-X/manifest -b bq2 --git-lfs"
 # ================================
 # Destroy Old Clones
 # ================================
@@ -42,7 +42,7 @@ crave run --no-patch -- "
   rm -rf device/xiaomi/peridot
   rm -rf out/target/product/peridot
   
-  echo '>>> Initializing AxionAOSP repo'
+  echo '>>> Initializing Evolution-X repo'
   $BUILD_DIFFERENT_ROM
 
   echo '>>> Cloning local manifests'
@@ -54,7 +54,7 @@ crave run --no-patch -- "
   . build/envsetup.sh
 
   echo '>>> Starting build'
-  axion peridot user gms core
+  lunch lineage_peridot-bp4a-user
   make installclean
-  ax -br
+  m evolution
 "
