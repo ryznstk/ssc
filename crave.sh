@@ -46,7 +46,7 @@ crave run --no-patch -- "
   $BUILD_DIFFERENT_ROM
 
   echo '>>> Cloning local manifests'
-  git clone https://github.com/droidcore/manifest_peridot.git .repo/local_manifests/
+  git clone https://github.com/ryznstk/manifest.git -b main .repo/local_manifests/
 
   echo '>>> Syncing sources'
   /opt/crave/resync.sh
