@@ -4,8 +4,8 @@ set -e
 # ================================
 # Project Configuration
 # ================================
-export PROJECTFOLDER="aosp"
-export PROJECTID="35"
+export PROJECTFOLDER="LOS"
+export PROJECTID="93"
 export REPO_INIT="repo init -u https://android.googlesource.com/platform/manifest"
 export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Evolution-X/manifest -b bq2 --git-lfs"
 # ================================
