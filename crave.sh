@@ -4,9 +4,9 @@ set -e
 # ================================
 # Project Configuration
 # ================================
-export PROJECTFOLDER="aosp"
-export PROJECTID="35"
-export REPO_INIT="repo init -u https://android.googlesource.com/platform/manifest"
+export PROJECTFOLDER="LOS"
+export PROJECTID="93"
+export REPO_INIT="https://github.com/accupara/los22.git -b lineage-22.1 --git-lfs --depth=1"
 export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Evolution-X/manifest -b bq2 --git-lfs"
 # ================================
 # Destroy Old Clones
