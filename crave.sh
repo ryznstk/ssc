@@ -7,7 +7,7 @@ set -e
 export PROJECTFOLDER="LOS"
 export PROJECTID="93"
 export REPO_INIT="https://github.com/accupara/los22.git -b lineage-22.1 --git-lfs --depth=1"
-export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Evolution-X/manifest -b bq2 --git-lfs"
+export BUILD_DIFFERENT_ROM="repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault"
 # ================================
 # Destroy Old Clones
 # ================================
@@ -46,7 +46,7 @@ crave run --no-patch -- "
   $BUILD_DIFFERENT_ROM
 
   echo '>>> Cloning local manifests'
-  git clone https://github.com/droidcore/manifest_peridot.git .repo/local_manifests/
+  git clone https://github.com/ryznstk/manifest.git .repo/local_manifests/
 
   echo '>>> Syncing sources'
   /opt/crave/resync.sh
@@ -54,7 +54,7 @@ crave run --no-patch -- "
   . build/envsetup.sh
 
   echo '>>> Starting build'
-  lunch lineage_peridot-bp4a-user
+  lunch infinity_peridot-user
   make installclean
-  m evolution
+  m bacon
 "
