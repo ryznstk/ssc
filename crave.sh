@@ -7,7 +7,7 @@ set -e
 export PROJECTFOLDER="LOS"
 export PROJECTID="93"
 export REPO_INIT="https://github.com/accupara/los22.git -b lineage-22.1 --git-lfs --depth=1"
-export BUILD_DIFFERENT_ROM="repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault"
+export BUILD_DIFFERENT_ROM="repo init https://github.com/Evolution-X/manifest -b bq2 --git-lfs"
 # ================================
 # Destroy Old Clones
 # ================================
@@ -54,7 +54,7 @@ crave run --no-patch -- "
   . build/envsetup.sh
 
   echo '>>> Starting build'
-  lunch infinity_peridot-user
+  lunch infinity_peridot-bp4a-user
   make installclean
-  m bacon
+  m evolution
 "
