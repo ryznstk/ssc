@@ -54,7 +54,7 @@ crave run --no-patch -- "
   . build/envsetup.sh
 
   echo '>>> Starting build'
-  lunch infinity_peridot-bp4a-user
+  lunch lineage_peridot-bp4a-user
   make installclean
   m evolution
 "
