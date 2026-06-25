@@ -7,7 +7,7 @@ set -e
 export PROJECTFOLDER="LOS"
 export PROJECTID="93"
 export REPO_INIT="https://github.com/accupara/los22.git -b lineage-22.1 --git-lfs --depth=1"
-export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Evolution-X/manifest -b bq2 --git-lfs"
+export BUILD_DIFFERENT_ROM="repo init -u https://github.com/Evolution-X/manifest -b cnb --git-lfs"
 # ================================
 # Destroy Old Clones
 # ================================
@@ -54,7 +54,7 @@ crave run --no-patch -- "
   . build/envsetup.sh
 
   echo '>>> Starting build'
-  lunch lineage_peridot-bp4a-user
+  lunch lineage_peridot-cp2a-userdebug
   make installclean
   m evolution
 "
